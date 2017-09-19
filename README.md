@@ -1,20 +1,25 @@
 # CreditCardValidator
 A simple tools to validate credit card using predefined credit card specs in credit_card_specs.json.
+
 e.g.
-"AMEX": {
-  "pattern": "^3[47]([0-9\\s]?)+",
-  "patternStrict": "^3[47][0-9]{5,}$",
-  "charLengths": [15],
-  "charGrouping": [4, 6, 5],
-  "cvcLength": "4"
-},
-"VISA": {
-  "pattern": "^4([0-9\\s]?)+",
-  "patternStrict": "^4[0-9]{6,}$",
-  "charLengths": [13, 16, 19],
-  "charGrouping": [4],
-  "cvcLength": "3"
+```json
+{
+  "AMEX": {
+    "pattern": "^3[47]([0-9\\s]?)+",
+    "patternStrict": "^3[47][0-9]{5,}$",
+    "charLengths": [15],
+    "charGrouping": [4, 6, 5],
+    "cvcLength": "4"
+  },
+  "VISA": {
+    "pattern": "^4([0-9\\s]?)+",
+    "patternStrict": "^4[0-9]{6,}$",
+    "charLengths": [13, 16, 19],
+    "charGrouping": [4],
+    "cvcLength": "3"
+  }
 }
+```
 
 Strict mode includes checking for exact characters defined in the credit card specs and validate the card numbers using Luhn algorithm.
 
